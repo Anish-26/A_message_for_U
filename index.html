@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special message, just for you.">
+    <title>💌 For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Timer -->
+    <div id="websiteTimer" class="website-timer">00:00</div>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Main Polaroid Card -->
+    <div class="polaroid-wrapper">
+        <div class="polaroid" id="polaroidCard">
+            <div class="image-container">
+                <img id="slideImage" src="https://cataas.com/cat/cute?width=600&height=450&t=1" alt="A cute cat"
+                    crossorigin="anonymous">
+            </div>
+            <div class="text-area">
+                <p class="slide-text" id="slideText">Hey... I have a few things I wanted to tell you.</p>
+
+                <!-- Quiz Area (Slide 5) -->
+                <div class="quiz-area" id="quizArea">
+                    <input type="text" class="quiz-input" id="quizInput" placeholder="Type your answer...">
+                    <p class="quiz-error" id="quizError">Hmm, try again! 🤔</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="btn-container" id="btnContainer">
+                <button class="btn btn-next" id="btnNext" onclick="nextSlide()">Next →</button>
+                <button class="btn btn-check hidden" id="btnCheck" onclick="checkAnswer()">Check ✓</button>
+                <button class="btn btn-yes hidden" id="btnYes" onclick="yesClicked()">Yes! 💖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- No Button (positioned separately for teleportation) -->
+    <button class="btn btn-no hidden" id="btnNo" onmouseover="dodgeButton()" ontouchstart="dodgeButton(event)"
+        onclick="dodgeButton(event)">No 😅</button>
+
+    <!-- Confetti / Hearts burst container -->
+    <div class="final-hearts" id="finalHearts"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
