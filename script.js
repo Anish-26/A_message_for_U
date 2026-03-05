@@ -42,7 +42,7 @@ const slides = [
         showYesNo: false
     },
     {
-        text: "You passed! 🎉 So... can I just have <span class='highlight-red'>30 minutes</span> of your day, every day? Let's go on a  <span class='highlight-blue'>walk</span>.",
+        text: "You passed! 🎉 So... can I just have <span class='highlight-red'>30 minutes</span> of your day, every day? .",
         image: 'https://cataas.com/cat/cute?width=600&height=450&t=7',
         showNext: false,
         showQuiz: false,
@@ -209,7 +209,7 @@ function dodgeButton(event) {
     btn.style.transition = 'none';
 
     // Fun text changes
-    const texts = ['Nope! 😜', "Can't catch me!", 'Try again! 😂', 'Haha nice try!', 'Not today! 🏃‍♂️', 'Oops! 😅', 'Almost! 🤭', "Really! 🥺", "Am i that bad ?😓"];
+    const texts = ['Nope! 😜', "Can't catch me!", 'Try again! 😂', 'Haha nice try!', 'Not today! 🏃‍♂️', 'Oops! 😅', 'Almost! 🤭', "Really! 🥺", "Am i that bad ?😓","চরৈবেতি"];
     btn.textContent = texts[Math.floor(Math.random() * texts.length)];
 }
 
@@ -332,4 +332,5 @@ function createFlyingKisses() {
         }, Math.random() * 1500); // Stagger the kisses over 1.5 seconds
     }
 }
+
 
