@@ -35,25 +35,25 @@ const slides = [
         showYesNo: false
     },
     {
-        text: "Before I ask... A quick check to prove you're a true <span class='highlight-blue'>Culer</span>! Who is Barça's all-time top scorer?",
+        text: 'I once heard that God doesn’t give you the people you want, He gives you the people you need… and lately I feel like that might be true for me.',
         image: 'https://cataas.com/cat/cute?width=600&height=450&t=5',
+        showNext: true,
+        showQuiz: false,
+        showYesNo: false
+    },
+    {
+        text: "Before I ask... A quick check to prove you're a true <span class='highlight-blue'>Culer</span>! Who is Barça's all-time top scorer?",
+        image: 'https://cataas.com/cat/cute?width=600&height=450&t=6',
         showNext: false,
         showQuiz: true,
         showYesNo: false
     },
     {
-        text: "You passed! 🎉 So... can I just have <span class='highlight-red'>30 minutes</span> of your day, every day? .",
-        image: 'https://cataas.com/cat/cute?width=600&height=450&t=6',
+        text: "You passed! 🎉 So... can I just have <span class='highlight-red'>30 minutes</span> of your day, every day? Let's go on a  <span class='highlight-blue'>walk</span>.",
+        image: 'https://cataas.com/cat/cute?width=600&height=450&t=7',
         showNext: false,
         showQuiz: false,
         showYesNo: true
-    },
-    {
-        text: 'I once heard that God doesn’t give you the people you want, He gives you the people you need… and lately I feel like that might be true for me.',
-        image: 'https://cataas.com/cat/cute?width=600&height=450&t=7',
-        showNext: true,
-        showQuiz: false,
-        showYesNo: false
     }
 ];
 
@@ -326,5 +326,4 @@ function createFlyingKisses() {
         }, Math.random() * 1500); // Stagger the kisses over 1.5 seconds
     }
 }
-
 
