@@ -35,13 +35,6 @@ const slides = [
         showYesNo: false
     },
     {
-        text: 'I once heard that God doesn’t give you the people you want, He gives you the people you need… and lately I feel like that might be true for me.',
-        image: 'https://cataas.com/cat/cute?width=600&height=450&t=5',
-        showNext: true,
-        showQuiz: false,
-        showYesNo: false
-    },
-    {
         text: "Before I ask... A quick check to prove you're a true <span class='highlight-blue'>Culer</span>! Who is Barça's all-time top scorer?",
         image: 'https://cataas.com/cat/cute?width=600&height=450&t=6',
         showNext: false,
@@ -54,7 +47,14 @@ const slides = [
         showNext: false,
         showQuiz: false,
         showYesNo: true
-    }
+    },
+    {
+        text: 'I once heard that God doesn’t give you the people you want, He gives you the people you need… and lately I feel like that might be true for me.',
+        image: 'https://cataas.com/cat/cute?width=600&height=450&t=5',
+        showNext: true,
+        showQuiz: false,
+        showYesNo: false
+    },
 ];
 
 let currentSlide = 0;
@@ -161,6 +161,8 @@ function nextSlide() {
     if (currentSlide < slides.length - 1) {
         currentSlide++;
         updateSlide();
+    } else {
+        showFinale();
     }
 }
 
@@ -213,6 +215,10 @@ function dodgeButton(event) {
 
 // ===== YES CLICKED =====
 function yesClicked() {
+    nextSlide();
+}
+
+function showFinale() {
     // Update content
     slideImage.classList.add('fade-out');
     setTimeout(() => {
